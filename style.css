@@ -132,10 +132,9 @@
     .brand-mark {
       width: 42px;
       height: 42px;
-      padding: 9px;
       border-radius: 12px;
-      background: var(--color-primary-highlight);
-      color: var(--color-primary);
+      object-fit: cover;
+      display: block;
       box-shadow: var(--shadow-sm);
     }
     .nav-links {
