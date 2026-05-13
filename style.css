@@ -191,7 +191,9 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: var(--space-2);
+      justify-content: center;
+      width: fit-content;
+      max-width: fit-content;
       padding: 0.45rem 0.8rem;
       border-radius: 999px;
       background: var(--color-primary-highlight);
@@ -200,7 +202,7 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      width: fit-content;
+      line-height: 1;
     }
     h1, h2 {
       font-family: var(--font-display);
