@@ -115,13 +115,12 @@
         </nav>
 
         <div class="mobile-menu-actions">
-          <nav class="lang-switcher" aria-label="Seletor de idioma mobile">
+          <nav class="lang-switcher" aria-label="Language selector mobile">
             <a
-              href="index.html"
+              href="index.html?theme=light"
               hreflang="pt-BR"
               lang="pt-BR"
-              class="lang-link is-active"
-              aria-current="page"
+              class="lang-link"
             >
               <svg
                 class="lang-globe"
@@ -141,8 +140,16 @@
               </svg>
               <span>Português</span>
             </a>
+
             <span class="lang-divider" aria-hidden="true">|</span>
-            <a href="en.html" hreflang="en-US" lang="en-US" class="lang-link">
+
+            <a
+              href="en.html?theme=light"
+              hreflang="en-US"
+              lang="en-US"
+              class="lang-link is-active"
+              aria-current="page"
+            >
               <span>English</span>
             </a>
           </nav>
@@ -151,7 +158,7 @@
             class="theme-toggle"
             type="button"
             data-theme-toggle
-            aria-label="Alternar tema"
+            aria-label="Switch to dark theme"
           ></button>
         </div>
       </div>

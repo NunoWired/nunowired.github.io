@@ -812,3 +812,21 @@ h2 {
   height: 16px;
   flex-shrink: 0;
 }
+
+.lang-switcher .lang-link,
+.lang-switcher .lang-link:link,
+.lang-switcher .lang-link:visited {
+  color: var(--color-text-muted);
+}
+
+.lang-switcher .lang-link:hover,
+.lang-switcher .lang-link:focus-visible {
+  color: var(--color-primary);
+}
+
+.lang-switcher .lang-link.is-active,
+.lang-switcher .lang-link.is-active:link,
+.lang-switcher .lang-link.is-active:visited,
+.lang-switcher .lang-link[aria-current="page"] {
+  color: var(--color-primary);
+}
