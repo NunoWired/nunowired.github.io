@@ -451,3 +451,25 @@
         animation-duration: 0.01ms !important;
       }
     }
+
+  .footer-note {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-emphasis {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--color-primary);
+    letter-spacing: -0.01em;
+  }
+
+  .coffee-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    transform: translateY(1px);
+  }
