@@ -387,6 +387,7 @@
       padding: var(--space-8);
       display: grid;
       gap: var(--space-4);
+      align-content: start;
     }
     .contact-links a {
       min-height: 44px;
