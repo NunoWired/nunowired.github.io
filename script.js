@@ -3,8 +3,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeToggles = document.querySelectorAll("[data-theme-toggle]");
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const mobileMenu = document.getElementById("mobile-menu");
+  const pageLang = (document.documentElement.lang || "pt-BR").toLowerCase();
+  const isEnglish = pageLang.startsWith("en");
 
-  let theme = "light";
+  const params = new URLSearchParams(window.location.search);
+  const themeFromUrl = params.get("theme");
+  const systemPrefersDark = window.matchMedia(
+    "(prefers-color-scheme: dark)",
+  ).matches;
+
+  let theme =
+    themeFromUrl === "dark" || themeFromUrl === "light"
+      ? themeFromUrl
+      : systemPrefersDark
+        ? "dark"
+        : "light";
 
   function getThemeIcon(currentTheme) {
     return currentTheme === "dark"
@@ -13,9 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function getThemeAriaLabel(currentTheme) {
-    const pageLang = document.documentElement.lang || "pt-BR";
-    const isEnglish = pageLang.toLowerCase().startsWith("en");
-
     if (isEnglish) {
       return currentTheme === "dark"
         ? "Switch to light theme"
@@ -38,9 +48,31 @@ document.addEventListener("DOMContentLoaded", function () {
     theme = newTheme;
     root.setAttribute("data-theme", theme);
     updateThemeButtons();
+    updateLanguageLinks();
   }
 
-  applyTheme("light");
+  function updateLanguageLinks() {
+    document
+      .querySelectorAll(".lang-switcher a[href]")
+      .forEach(function (link) {
+        const href = link.getAttribute("href");
+        if (!href) return;
+        if (href.startsWith("#")) return;
+
+        const hasQuery = href.includes("?");
+        const cleanHref = href.split("?")[0];
+        link.setAttribute("href", cleanHref + "?theme=" + theme);
+      });
+  }
+
+  applyTheme(theme);
+
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  mediaQuery.addEventListener("change", function (event) {
+    const urlTheme = new URLSearchParams(window.location.search).get("theme");
+    if (urlTheme === "dark" || urlTheme === "light") return;
+    applyTheme(event.matches ? "dark" : "light");
+  });
 
   themeToggles.forEach(function (toggle) {
     toggle.addEventListener("click", function () {
@@ -52,10 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     menuToggle.addEventListener("click", function () {
       const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
       menuToggle.setAttribute("aria-expanded", String(!isOpen));
-
-      const isEnglish = (document.documentElement.lang || "")
-        .toLowerCase()
-        .startsWith("en");
       menuToggle.setAttribute(
         "aria-label",
         isOpen
@@ -66,22 +94,16 @@ document.addEventListener("DOMContentLoaded", function () {
             ? "Close menu"
             : "Fechar menu",
       );
-
       mobileMenu.hidden = isOpen;
     });
 
-    mobileMenu.querySelectorAll("a").forEach(function (link) {
+    mobileMenu.querySelectorAll("a[href^='#']").forEach(function (link) {
       link.addEventListener("click", function () {
         menuToggle.setAttribute("aria-expanded", "false");
-
-        const isEnglish = (document.documentElement.lang || "")
-          .toLowerCase()
-          .startsWith("en");
         menuToggle.setAttribute(
           "aria-label",
           isEnglish ? "Open menu" : "Abrir menu",
         );
-
         mobileMenu.hidden = true;
       });
     });
