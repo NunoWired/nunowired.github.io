@@ -1,311 +1,564 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Antonio Nunes | Portfolio</title>
-  <link rel="icon" type="image/png" href="assets/n.png">
-  <link rel="shortcut icon" href="assets/n.png">
-  <link rel="apple-touch-icon" href="assets/n.png">
-  <meta name="description" content="Professional portfolio of Antonio Junio Nunes Damasceno, focusing on technical support, IT infrastructure, and junior web development." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <a class="skip-link" href="#conteudo">Skip to content</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antonio Nunes | Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/n.png" />
+    <link rel="shortcut icon" href="assets/n.png" />
+    <link rel="apple-touch-icon" href="assets/n.png" />
+    <meta
+      name="description"
+      content="Professional portfolio of Antonio Junio Nunes Damasceno, focusing on technical support, IT infrastructure, and junior web development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Skip to content</a>
 
-  <header class="site-header">
-  <div class="container nav-bar">
-    <a class="brand" href="#home" aria-label="Go to home">
-      <img class="brand-mark" src="assets/n.png" alt="NunoWired logo" width="42" height="42">
-      <span>Antonio Nunes</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-      <nav class="lang-switcher" aria-label="Language selector">
-        <a href="index.html" hreflang="pt-BR" lang="pt-BR" class="lang-link">
-          <svg class="lang-globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M3 12h18"></path>
-            <path d="M12 3a15 15 0 0 1 0 18"></path>
-            <path d="M12 3a15 15 0 0 0 0 18"></path>
-          </svg>
-          <span>Português</span>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="#inicio" aria-label="Ir para o início">
+          <img
+            class="brand-mark"
+            src="assets/n.png"
+            alt="Logo NunoWired"
+            width="42"
+            height="42"
+          />
+          <span>Antonio Nunes</span>
         </a>
 
-        <span class="lang-divider" aria-hidden="true">|</span>
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-        <a href="en.html" hreflang="en-US" lang="en-US" class="lang-link is-active" aria-current="page">
-          <span>English</span>
-        </a>
-      </nav>
+        <div class="header-actions">
+          <nav class="lang-switcher" aria-label="Seletor de idioma">
+            <a
+              href="index.html"
+              hreflang="pt-BR"
+              lang="pt-BR"
+              class="lang-link is-active"
+              aria-current="page"
+            >
+              <svg
+                class="lang-globe"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M3 12h18"></path>
+                <path d="M12 3a15 15 0 0 1 0 18"></path>
+                <path d="M12 3a15 15 0 0 0 0 18"></path>
+              </svg>
+              <span>Português</span>
+            </a>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <a href="en.html" hreflang="en-US" lang="en-US" class="lang-link">
+              <span>English</span>
+            </a>
+          </nav>
 
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme"></button>
-    </div>
-  </div>
-</header>
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Alternar tema"
+          ></button>
 
-  <main id="conteudo">
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Professional Portfolio</span>
-          <h1>Technical support, infrastructure, and strategic transition to web.</h1>
-          <p class="lead">I'm Antonio Nunes, an IT professional with a solid track record in technical support, systems deployment, networking, servers, and user support. Today, I am seeking opportunities in technical support and junior web development, combining practical experience, operational vision, and a degree in Systems Analysis and Development.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#contato">Get in touch</a>
-            <a class="btn btn-secondary" href="https://linkedin.com/in/nunowired" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
-          </div>
-          <div class="meta-list" aria-label="Quick summary">
-            <span>Brasília - Brazil</span>
-            <span>20 years in IT</span>
-            <span>Support & Infrastructure</span>
-            <span>HTML, CSS, JavaScript & FlutterFlow (Low-Code/No-Code)</span>
-          </div>
-        </div>
-
-        <aside class="hero-card" aria-label="Profile highlights">
-          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <rect x="10" y="14" width="44" height="30" rx="8" stroke="currentColor" stroke-width="4"/>
-            <path d="M22 50h20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <path d="M24 28l6 6 10-12" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div>
-            <h2>Recruiter Profile</h2>
-            <p>Professional with proven experience in technical support, consulting, support management, and corporate environment operations, now expanding into junior web development.</p>
-          </div>
-          <div class="stats-grid">
-            <div class="stat">
-              <strong>2010–2023</strong>
-              <span>Continuous work in consulting and support.</span>
-            </div>
-            <div class="stat">
-              <strong>ADS 2023</strong>
-              <span>Degree in Systems Analysis and Development.</span>
-            </div>
-            <div class="stat">
-              <strong>Current Stack</strong>
-              <span>Infrastructure, Support, HTML, CSS, JS & Low-Code (FlutterFlow).</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="sobre">
-      <div class="container grid-2">
-        <div class="section-intro">
-          <span class="eyebrow">About me</span>
-          <h2>Real-world IT experience focused on practical solutions.</h2>
-          <p>I have a consolidated career in technology, with experience in support, monitoring, systems consulting, support management, and operational leadership. Throughout my career, I have worked with commercial automation, GNU/Linux and Windows Server, databases, VPNs, Linux firewalls, monitoring, and support for electronic funds transfer (EFT) solutions.</p>
-        </div>
-        <article class="card">
-          <h2>Current Objective</h2>
-          <p>I am seeking opportunities in technical support and junior web development, with interest in environments where I can contribute through organization, service, problem-solving, and continuous evolution. My differentiator lies in uniting a technical base, end-user experience, and the ability to adapt to new tools and processes.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="competencias">
-      <div class="container">
-        <div class="section-intro">
-          <span class="eyebrow">Skills</span>
-          <h2>Technical foundation built on operations, support, and systems.</h2>
-          <p>These are the areas that best represent my experience and my current professional moment.</p>
-        </div>
-        <div class="skills-grid" role="list" aria-label="Skills list">
-          <span class="skill-chip" role="listitem">On-site and Remote Technical Support</span>
-          <span class="skill-chip" role="listitem">Systems Deployment</span>
-          <span class="skill-chip" role="listitem">GNU/Linux and Windows Server</span>
-          <span class="skill-chip" role="listitem">MySQL and PostgreSQL</span>
-          <span class="skill-chip" role="listitem">Networking, VPN, and Linux Firewall</span>
-          <span class="skill-chip" role="listitem">Network Monitoring and Security</span>
-          <span class="skill-chip" role="listitem">EFT and Commercial Automation</span>
-          <span class="skill-chip" role="listitem">User and Client Service</span>
-          <span class="skill-chip" role="listitem">Team Leadership</span>
-          <span class="skill-chip" role="listitem">HTML, CSS, and JavaScript</span>
-          <span class="skill-chip" role="listitem">FlutterFlow and Low-Code</span>
-          <span class="skill-chip" role="listitem">Fast Learning and Adaptation</span>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-toggle
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="experiencia">
-      <div class="container">
-        <div class="section-intro">
-          <span class="eyebrow">Experience</span>
-          <h2>Professional Background</h2>
-          <p>My experience was built in real-world environments of operation, support, and deployment, with direct contact with users, clients, systems, and infrastructure.</p>
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav class="mobile-nav-links" aria-label="Navegação mobile">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="mobile-menu-actions">
+          <nav class="lang-switcher" aria-label="Seletor de idioma mobile">
+            <a
+              href="index.html"
+              hreflang="pt-BR"
+              lang="pt-BR"
+              class="lang-link is-active"
+              aria-current="page"
+            >
+              <svg
+                class="lang-globe"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M3 12h18"></path>
+                <path d="M12 3a15 15 0 0 1 0 18"></path>
+                <path d="M12 3a15 15 0 0 0 0 18"></path>
+              </svg>
+              <span>Português</span>
+            </a>
+            <span class="lang-divider" aria-hidden="true">|</span>
+            <a href="en.html" hreflang="en-US" lang="en-US" class="lang-link">
+              <span>English</span>
+            </a>
+          </nav>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Alternar tema"
+          ></button>
         </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <strong>Canal Técnico Consultoria e Tecnologia Ltda</strong>
-                <p>Support Technician, Support Manager, and Branch Manager</p>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Professional Portfolio</span>
+            <h1>
+              Technical support, infrastructure, and strategic transition to
+              web.
+            </h1>
+            <p class="lead">
+              I'm Antonio Nunes, an IT professional with a solid track record in
+              technical support, systems deployment, networking, servers, and
+              user support. Today, I am seeking opportunities in technical
+              support and junior web development, combining practical
+              experience, operational vision, and a degree in Systems Analysis
+              and Development.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contato">Get in touch</a>
+              <a
+                class="btn btn-secondary"
+                href="https://linkedin.com/in/nunowired"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View LinkedIn</a
+              >
+            </div>
+            <div class="meta-list" aria-label="Quick summary">
+              <span>Brasília - Brazil</span>
+              <span>20 years in IT</span>
+              <span>Support & Infrastructure</span>
+              <span
+                >HTML, CSS, JavaScript & FlutterFlow (Low-Code/No-Code)</span
+              >
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Profile highlights">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <rect
+                x="10"
+                y="14"
+                width="44"
+                height="30"
+                rx="8"
+                stroke="currentColor"
+                stroke-width="4"
+              />
+              <path
+                d="M22 50h20"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <path
+                d="M24 28l6 6 10-12"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div>
+              <h2>Recruiter Profile</h2>
+              <p>
+                Professional with proven experience in technical support,
+                consulting, support management, and corporate environment
+                operations, now expanding into junior web development.
+              </p>
+            </div>
+            <div class="stats-grid">
+              <div class="stat">
+                <strong>2010–2023</strong>
+                <span>Continuous work in consulting and support.</span>
               </div>
-              <span>Jul/2010 - Apr/2023</span>
-            </div>
-            <div class="timeline-content">
-              <p>Work in the implementation of commercial automation systems for clients of different sizes, process monitoring, and technical support in a corporate environment.</p>
-              <ul>
-                <li>Installation and configuration of GNU/Linux and Microsoft Windows Servers.</li>
-                <li>Work with MySQL and PostgreSQL databases.</li>
-                <li>Configuration of Linux firewalls, VPNs, monitoring, and network security.</li>
-                <li>Installation, configuration, and support for SiTef and EFT solutions.</li>
-                <li>On-site and remote service, plus leadership in support and operations.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <strong>Soledade Comercial de Alimentos Ltda</strong>
-                <p>IT Supervisor</p>
+              <div class="stat">
+                <strong>ADS 2023</strong>
+                <span>Degree in Systems Analysis and Development.</span>
               </div>
-              <span>Jun/2009 - Dec/2009</span>
-            </div>
-            <div class="timeline-content">
-              <p>Responsible for the IT team and user support, focusing on operational stability and performance improvement.</p>
-              <ul>
-                <li>User support for the corporate network.</li>
-                <li>Improvements in communication between stores.</li>
-                <li>Performance optimization of commercial automation software.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <strong>Serviços Brisa Brasil Ltda</strong>
-                <p>Monitoring Operator</p>
+              <div class="stat">
+                <strong>Current Stack</strong>
+                <span
+                  >Infrastructure, Support, HTML, CSS, JS & Low-Code
+                  (FlutterFlow).</span
+                >
               </div>
-              <span>Dec/2005 - Nov/2006</span>
             </div>
-            <div class="timeline-content">
-              <p>Work in monitoring communication between branches and network support in a sensitive environment oriented towards operational continuity.</p>
-              <ul>
-                <li>Monitoring of communication between Banco do Brasil branches.</li>
-                <li>Network support to managers during specific operations.</li>
-                <li>Contact with Cisco communication environments.</li>
-              </ul>
-            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="container grid-2">
+          <div class="section-intro">
+            <span class="eyebrow">About me</span>
+            <h2>Real-world IT experience focused on practical solutions.</h2>
+            <p>
+              I have a consolidated career in technology, with experience in
+              support, monitoring, systems consulting, support management, and
+              operational leadership. Throughout my career, I have worked with
+              commercial automation, GNU/Linux and Windows Server, databases,
+              VPNs, Linux firewalls, monitoring, and support for electronic
+              funds transfer (EFT) solutions.
+            </p>
+          </div>
+          <article class="card">
+            <h2>Current Objective</h2>
+            <p>
+              I am seeking opportunities in technical support and junior web
+              development, with interest in environments where I can contribute
+              through organization, service, problem-solving, and continuous
+              evolution. My differentiator lies in uniting a technical base,
+              end-user experience, and the ability to adapt to new tools and
+              processes.
+            </p>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="projetos">
-      <div class="container">
-        <div class="section-intro">
-          <span class="eyebrow">Projects and Studies</span>
-          <h2>Practical building for the next professional stage</h2>
-          <p>In addition to consolidated experience in support and infrastructure, I have been strengthening my work in web development and digital solutions, focusing on practical application and continuous learning.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card">
-            <span class="project-tag">Web Development</span>
-            <h2>Foundation in HTML, CSS, and JavaScript</h2>
-            <p>I have been studying web development with a focus on page structure, styling, interface logic, and building simple, organized, and functional solutions.</p>
-            <ul>
-              <li>Creation of static and responsive pages.</li>
-              <li>Visual organization focusing on clarity and usability.</li>
-              <li>Transition of technical support knowledge to web interface construction.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <span class="project-tag">Low-code</span>
-            <h2>App Project with FlutterFlow</h2>
-            <p>I have also been exploring the use of low-code and no-code platforms to structure digital products, navigation flows, and MVPs focusing on real user needs.</p>
-            <ul>
-              <li>Study of screen flows and user profiles.</li>
-              <li>Structuring functionalities with a practical product vision.</li>
-              <li>Learning focused on execution, validation, and continuous evolution.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="formacao">
-      <div class="container grid-2">
-        <div class="card">
-          <span class="eyebrow">Education</span>
-          <h2>Systems Analysis and Development</h2>
-          <p>Degree completed in 2023 at UNIFAEL Centro Universitário, focusing on analysis, needs assessment, systems development, and methodologies applied to the technology market.</p>
-        </div>
-        <div class="card">
-          <span class="eyebrow">Professional Direction</span>
-          <h2>Mature experience, new phase in Web</h2>
-          <p>My professional proposal is clear: leverage a consistent base in IT, support, and operations to grow in junior web development, with a practical posture, responsibility, and a willingness to learn.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contato">
-      <div class="container contact-grid">
-        <div class="contact-card">
-          <span class="eyebrow">Contact</span>
-          <h2>Let's talk</h2>
-          <p>I am available for opportunities in technical support, infrastructure, technical service, and junior web development.</p>
-          <div class="contact-links">
-            <a href="mailto:nunowired@gmail.com">nunowired@gmail.com</a>
-            <a href="https://linkedin.com/in/nunowired" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <section class="section" id="competencias">
+        <div class="container">
+          <div class="section-intro">
+            <span class="eyebrow">Skills</span>
+            <h2>
+              Technical foundation built on operations, support, and systems.
+            </h2>
+            <p>
+              These are the areas that best represent my experience and my
+              current professional moment.
+            </p>
+          </div>
+          <div class="skills-grid" role="list" aria-label="Skills list">
+            <span class="skill-chip" role="listitem"
+              >On-site and Remote Technical Support</span
+            >
+            <span class="skill-chip" role="listitem">Systems Deployment</span>
+            <span class="skill-chip" role="listitem"
+              >GNU/Linux and Windows Server</span
+            >
+            <span class="skill-chip" role="listitem">MySQL and PostgreSQL</span>
+            <span class="skill-chip" role="listitem"
+              >Networking, VPN, and Linux Firewall</span
+            >
+            <span class="skill-chip" role="listitem"
+              >Network Monitoring and Security</span
+            >
+            <span class="skill-chip" role="listitem"
+              >EFT and Commercial Automation</span
+            >
+            <span class="skill-chip" role="listitem"
+              >User and Client Service</span
+            >
+            <span class="skill-chip" role="listitem">Team Leadership</span>
+            <span class="skill-chip" role="listitem"
+              >HTML, CSS, and JavaScript</span
+            >
+            <span class="skill-chip" role="listitem"
+              >FlutterFlow and Low-Code</span
+            >
+            <span class="skill-chip" role="listitem"
+              >Fast Learning and Adaptation</span
+            >
           </div>
         </div>
-        <div class="contact-card">
-          <span class="eyebrow">Location</span>
-          <h2>Brasília - DF (Brazil)</h2>
-          <p>I reside in Ceilândia Norte, Distrito Federal, and am interested in on-site, hybrid, or remote opportunities, depending on the job profile.</p>
-          <div class="stats-grid">
-            <div class="stat">
-              <strong>Profile</strong>
-              <span>Technical Support and Junior Web Development.</span>
+      </section>
+
+      <section class="section" id="experiencia">
+        <div class="container">
+          <div class="section-intro">
+            <span class="eyebrow">Experience</span>
+            <h2>Professional Background</h2>
+            <p>
+              My experience was built in real-world environments of operation,
+              support, and deployment, with direct contact with users, clients,
+              systems, and infrastructure.
+            </p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-top">
+                <div>
+                  <strong>Canal Técnico Consultoria e Tecnologia Ltda</strong>
+                  <p>Support Technician, Support Manager, and Branch Manager</p>
+                </div>
+                <span>Jul/2010 - Apr/2023</span>
+              </div>
+              <div class="timeline-content">
+                <p>
+                  Work in the implementation of commercial automation systems
+                  for clients of different sizes, process monitoring, and
+                  technical support in a corporate environment.
+                </p>
+                <ul>
+                  <li>
+                    Installation and configuration of GNU/Linux and Microsoft
+                    Windows Servers.
+                  </li>
+                  <li>Work with MySQL and PostgreSQL databases.</li>
+                  <li>
+                    Configuration of Linux firewalls, VPNs, monitoring, and
+                    network security.
+                  </li>
+                  <li>
+                    Installation, configuration, and support for SiTef and EFT
+                    solutions.
+                  </li>
+                  <li>
+                    On-site and remote service, plus leadership in support and
+                    operations.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-top">
+                <div>
+                  <strong>Soledade Comercial de Alimentos Ltda</strong>
+                  <p>IT Supervisor</p>
+                </div>
+                <span>Jun/2009 - Dec/2009</span>
+              </div>
+              <div class="timeline-content">
+                <p>
+                  Responsible for the IT team and user support, focusing on
+                  operational stability and performance improvement.
+                </p>
+                <ul>
+                  <li>User support for the corporate network.</li>
+                  <li>Improvements in communication between stores.</li>
+                  <li>
+                    Performance optimization of commercial automation software.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-top">
+                <div>
+                  <strong>Serviços Brisa Brasil Ltda</strong>
+                  <p>Monitoring Operator</p>
+                </div>
+                <span>Dec/2005 - Nov/2006</span>
+              </div>
+              <div class="timeline-content">
+                <p>
+                  Work in monitoring communication between branches and network
+                  support in a sensitive environment oriented towards
+                  operational continuity.
+                </p>
+                <ul>
+                  <li>
+                    Monitoring of communication between Banco do Brasil
+                    branches.
+                  </li>
+                  <li>
+                    Network support to managers during specific operations.
+                  </li>
+                  <li>Contact with Cisco communication environments.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projetos">
+        <div class="container">
+          <div class="section-intro">
+            <span class="eyebrow">Projects and Studies</span>
+            <h2>Practical building for the next professional stage</h2>
+            <p>
+              In addition to consolidated experience in support and
+              infrastructure, I have been strengthening my work in web
+              development and digital solutions, focusing on practical
+              application and continuous learning.
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-tag">Web Development</span>
+              <h2>Foundation in HTML, CSS, and JavaScript</h2>
+              <p>
+                I have been studying web development with a focus on page
+                structure, styling, interface logic, and building simple,
+                organized, and functional solutions.
+              </p>
+              <ul>
+                <li>Creation of static and responsive pages.</li>
+                <li>Visual organization focusing on clarity and usability.</li>
+                <li>
+                  Transition of technical support knowledge to web interface
+                  construction.
+                </li>
+              </ul>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Low-code</span>
+              <h2>App Project with FlutterFlow</h2>
+              <p>
+                I have also been exploring the use of low-code and no-code
+                platforms to structure digital products, navigation flows, and
+                MVPs focusing on real user needs.
+              </p>
+              <ul>
+                <li>Study of screen flows and user profiles.</li>
+                <li>
+                  Structuring functionalities with a practical product vision.
+                </li>
+                <li>
+                  Learning focused on execution, validation, and continuous
+                  evolution.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="formacao">
+        <div class="container grid-2">
+          <div class="card">
+            <span class="eyebrow">Education</span>
+            <h2>Systems Analysis and Development</h2>
+            <p>
+              Degree completed in 2023 at UNIFAEL Centro Universitário, focusing
+              on analysis, needs assessment, systems development, and
+              methodologies applied to the technology market.
+            </p>
+          </div>
+          <div class="card">
+            <span class="eyebrow">Professional Direction</span>
+            <h2>Mature experience, new phase in Web</h2>
+            <p>
+              My professional proposal is clear: leverage a consistent base in
+              IT, support, and operations to grow in junior web development,
+              with a practical posture, responsibility, and a willingness to
+              learn.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="container contact-grid">
+          <div class="contact-card">
+            <span class="eyebrow">Contact</span>
+            <h2>Let's talk</h2>
+            <p>
+              I am available for opportunities in technical support,
+              infrastructure, technical service, and junior web development.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:nunowired@gmail.com">nunowired@gmail.com</a>
+              <a
+                href="https://linkedin.com/in/nunowired"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
             </div>
-            <div class="stat">
-              <strong>Quick Contact</strong>
-              <span>LinkedIn and email as primary channels.</span>
+          </div>
+          <div class="contact-card">
+            <span class="eyebrow">Location</span>
+            <h2>Brasília - DF (Brazil)</h2>
+            <p>
+              I reside in Ceilândia Norte, Distrito Federal, and am interested
+              in on-site, hybrid, or remote opportunities, depending on the job
+              profile.
+            </p>
+            <div class="stats-grid">
+              <div class="stat">
+                <strong>Profile</strong>
+                <span>Technical Support and Junior Web Development.</span>
+              </div>
+              <div class="stat">
+                <strong>Quick Contact</strong>
+                <span>LinkedIn and email as primary channels.</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-note">Antonio Nunes — Code with <em class="footer-emphasis">Purpose</em> and plenty of
-      
-      <img
-        class="coffee-icon"
-        src="assets/coffee.png"
-        alt="Coffee cup icon"
-        width="32"
-        height="32"
-      >
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-note">
+          Antonio Nunes — Code with
+          <em class="footer-emphasis">Purpose</em> and plenty of
 
-      </p>
-      <div class="footer-links">
-        <a href="#inicio">Home</a>
-        <a href="#experiencia">Experience</a>
-        <a href="#contato">Contact</a>
+          <img
+            class="coffee-icon"
+            src="assets/coffee.png"
+            alt="Coffee cup icon"
+            width="32"
+            height="32"
+          />
+        </p>
+        <div class="footer-links">
+          <a href="#inicio">Home</a>
+          <a href="#experiencia">Experience</a>
+          <a href="#contato">Contact</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
     <script src="script.js" defer></script>
-</body>
+  </body>
 </html>
