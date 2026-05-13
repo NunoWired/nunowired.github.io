@@ -1,4 +1,5 @@
 :root, [data-theme="light"] {
+      --bg-pattern: url("assets/bg_light.jpg");
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
       --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
       --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
@@ -44,6 +45,7 @@
     }
 
     [data-theme="dark"] {
+      --bg-pattern: url("assets/bg_dark.jpg");
       --color-bg: #171614;
       --color-surface: #1c1b19;
       --color-surface-2: #23211f;
@@ -65,12 +67,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      min-height: 100vh;
-      font-family: var(--font-body);
+      min-height: 100dvh;
+      line-height: 1.6;
+      font-family: var(--font-body, sans-serif);
       font-size: var(--text-base);
-      line-height: 1.65;
       color: var(--color-text);
-      background: var(--color-bg);
+      background-color: var(--color-bg);
+      background-image: var(--bg-pattern);
+      background-repeat: repeat;
+      background-position: top left;
     }
     img, svg { display: block; max-width: 100%; }
     a {
