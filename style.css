@@ -481,11 +481,34 @@
     display: inline-block;
     vertical-align: middle;
     flex-shrink: 0;
+    transition:
+      transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+      filter 240ms cubic-bezier(0.16, 1, 0.3, 1);
     filter:
       drop-shadow(1px 0 0 #ffffff)
       drop-shadow(-1px 0 0 #ffffff)
       drop-shadow(0 1px 0 #ffffff)
       drop-shadow(0 -1px 0 #ffffff);
+  }
+
+  .coffee-icon:hover {
+    transform: translateY(-4px);
+    filter:
+      drop-shadow(1px 0 0 #ffffff)
+      drop-shadow(-1px 0 0 #ffffff)
+      drop-shadow(0 1px 0 #ffffff)
+      drop-shadow(0 -1px 0 #ffffff)
+      drop-shadow(0 8px 14px rgba(0, 0, 0, 0.18));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coffee-icon {
+      transition: none;
+    }
+
+    .coffee-icon:hover {
+      transform: none;
+    }
   }
 
   .card,
