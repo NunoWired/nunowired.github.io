@@ -1,7 +1,7 @@
 (function () {
       const root = document.documentElement;
       const toggle = document.querySelector('[data-theme-toggle]');
-      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      let theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'dark' : 'light';
 
       const renderIcon = () => {
         toggle.innerHTML = theme === 'dark'
