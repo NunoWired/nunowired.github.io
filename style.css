@@ -472,7 +472,7 @@
   .coffee-icon {
     width: 18px;
     height: 18px;
-    color: var(--color-primary);
+    display: inline-block;
+    vertical-align: middle;
     flex-shrink: 0;
-    transform: translateY(1px);
   }
