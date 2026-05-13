@@ -170,14 +170,14 @@
       background: var(--color-surface);
     }
 
-  /*@media (max-width: 920px) {
+  @media (max-width: 920px) {
     .hero-grid,
     .grid-2,
     .project-grid,
     .contact-grid {
       grid-template-columns: 1fr;
     }
-  }*/
+  }
 
     .hero {
       padding: clamp(var(--space-12), 8vw, var(--space-24)) 0 var(--space-16);
@@ -435,13 +435,13 @@
     }
     .footer-links a:hover { color: var(--color-primary); }
 
-    /*@media (max-width: 920px) {
+    @media (max-width: 920px) {
       .hero-grid,
       .grid-2,
       .project-grid,
       .contact-grid {
         grid-template-columns: 1fr;
-      }*/
+      }
       
       .nav-bar {
         min-height: auto;
