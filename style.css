@@ -488,18 +488,24 @@
       drop-shadow(0 -1px 0 #ffffff);
   }
 
+  .card,
   .project-card,
   .contact-card,
+  .timeline-item,
+  .hero-card,
   .stat {
     transition:
       transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
-     box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1),
-     border-color 240ms cubic-bezier(0.16, 1, 0.3, 1);
-     will-change: transform, box-shadow;
+      box-shadow 240ms cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 240ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, box-shadow;
   }
 
+  .card:hover,
   .project-card:hover,
   .contact-card:hover,
+  .timeline-item:hover,
+  .hero-card:hover,
   .stat:hover {
     transform: translateY(-8px);
     box-shadow:
@@ -509,14 +515,20 @@
   }
 
 @media (prefers-reduced-motion: reduce) {
+  .card,
   .project-card,
   .contact-card,
+  .timeline-item,
+  .hero-card,
   .stat {
     transition: none;
   }
 
+  .card:hover,
   .project-card:hover,
   .contact-card:hover,
+  .timeline-item:hover,
+  .hero-card:hover,
   .stat:hover {
     transform: none;
   }
