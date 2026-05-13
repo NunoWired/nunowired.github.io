@@ -76,6 +76,7 @@
       background-image: var(--bg-pattern);
       background-repeat: repeat;
       background-position: top left;
+      background-size: auto;
     }
     img, svg { display: block; max-width: 100%; }
     a {
