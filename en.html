@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Antonio Nunes | Portfolio</title>
     <link rel="icon" type="image/png" href="assets/n.png" />
-    <link rel="shortcut icon" href="assets/n.png" />
     <link rel="apple-touch-icon" href="assets/n.png" />
     <meta
       name="description"
       content="Portfolio of Antonio Junio Nunes Damasceno, focusing on technical support, IT infrastructure, and junior web development."
     />
+    <link rel="canonical" href="https://nunowired.github.io/en.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://nunowired.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://nunowired.github.io/en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://nunowired.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Antonio Nunes" />
+    <meta property="og:title" content="Antonio Nunes | Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of Antonio Junio Nunes Damasceno, focusing on technical support, IT infrastructure, and junior web development."
+    />
+    <meta property="og:url" content="https://nunowired.github.io/en.html" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Antonio Nunes | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Antonio Junio Nunes Damasceno, focusing on technical support, IT infrastructure, and junior web development."
+    />
+    <script src="theme-init.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,7 +44,7 @@
 
     <header class="site-header">
       <div class="container nav-bar">
-        <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <a class="brand" href="#inicio" aria-label="Go to home">
           <img
             class="brand-mark"
             src="assets/n.png"
@@ -40,6 +60,7 @@
           <a href="#competencias">Skills</a>
           <a href="#experiencia">Experience</a>
           <a href="#projetos">Projects</a>
+          <a href="#formacao">Education</a>
           <a href="#contato">Contact</a>
         </nav>
 
@@ -87,13 +108,27 @@
             class="theme-toggle"
             type="button"
             data-theme-toggle
-            aria-label="Alternar tema"
-          ></button>
+            aria-label="Switch to dark theme"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+              />
+            </svg>
+          </button>
 
           <button
             class="menu-toggle"
             type="button"
-            aria-label="Abrir menu"
+            aria-label="Open menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
             data-menu-toggle
@@ -111,13 +146,14 @@
           <a href="#competencias">Skills</a>
           <a href="#experiencia">Experience</a>
           <a href="#projetos">Projects</a>
+          <a href="#formacao">Education</a>
           <a href="#contato">Contact</a>
         </nav>
 
         <div class="mobile-menu-actions">
           <nav class="lang-switcher" aria-label="Language selector mobile">
             <a
-              href="index.html?theme=light"
+              href="index.html"
               hreflang="pt-BR"
               lang="pt-BR"
               class="lang-link"
@@ -144,7 +180,7 @@
             <span class="lang-divider" aria-hidden="true">|</span>
 
             <a
-              href="en.html?theme=light"
+              href="en.html"
               hreflang="en-US"
               lang="en-US"
               class="lang-link is-active"
@@ -159,7 +195,21 @@
             type="button"
             data-theme-toggle
             aria-label="Switch to dark theme"
-          ></button>
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -185,7 +235,7 @@
               <a class="btn btn-primary" href="#contato">Get in touch</a>
               <a
                 class="btn btn-secondary"
-                href="https://linkedin.com/in/nunowired"
+                href="https://www.linkedin.com/in/nunowired"
                 target="_blank"
                 rel="noopener noreferrer"
                 >View LinkedIn</a
@@ -196,7 +246,7 @@
               <span>20 years in IT</span>
               <span>Support & Infrastructure</span>
               <span
-                >HTML, CSS, JavaScript & FlutterFlow (Low-Code/No-Code)</span
+                >HTML, CSS, JavaScript & FlutterFlow (low-code/no-code)</span
               >
             </div>
           </div>
@@ -246,8 +296,8 @@
               <div class="stat">
                 <strong>Current Stack</strong>
                 <span
-                  >Infrastructure, Support, HTML, CSS, JS & Low-Code
-                  (FlutterFlow).</span
+                  >Infrastructure, support, HTML, CSS, JavaScript and
+                  low-code/no-code (FlutterFlow).</span
                 >
               </div>
             </div>
@@ -295,38 +345,20 @@
               current professional moment.
             </p>
           </div>
-          <div class="skills-grid" role="list" aria-label="Skills list">
-            <span class="skill-chip" role="listitem"
-              >On-site and Remote Technical Support</span
-            >
-            <span class="skill-chip" role="listitem">Systems Deployment</span>
-            <span class="skill-chip" role="listitem"
-              >GNU/Linux and Windows Server</span
-            >
-            <span class="skill-chip" role="listitem">MySQL and PostgreSQL</span>
-            <span class="skill-chip" role="listitem"
-              >Networking, VPN, and Linux Firewall</span
-            >
-            <span class="skill-chip" role="listitem"
-              >Network Monitoring and Security</span
-            >
-            <span class="skill-chip" role="listitem"
-              >EFT and Commercial Automation</span
-            >
-            <span class="skill-chip" role="listitem"
-              >User and Client Service</span
-            >
-            <span class="skill-chip" role="listitem">Team Leadership</span>
-            <span class="skill-chip" role="listitem"
-              >HTML, CSS, and JavaScript</span
-            >
-            <span class="skill-chip" role="listitem"
-              >FlutterFlow and Low-Code</span
-            >
-            <span class="skill-chip" role="listitem"
-              >Fast Learning and Adaptation</span
-            >
-          </div>
+          <ul class="skills-grid" aria-label="Skills list">
+            <li class="skill-chip">On-site and Remote Technical Support</li>
+            <li class="skill-chip">Systems Deployment</li>
+            <li class="skill-chip">GNU/Linux and Windows Server</li>
+            <li class="skill-chip">MySQL and PostgreSQL</li>
+            <li class="skill-chip">Networking, VPN, and Linux Firewall</li>
+            <li class="skill-chip">Network Monitoring and Security</li>
+            <li class="skill-chip">EFT and Commercial Automation</li>
+            <li class="skill-chip">User and Client Service</li>
+            <li class="skill-chip">Team Leadership</li>
+            <li class="skill-chip">HTML, CSS, and JavaScript</li>
+            <li class="skill-chip">FlutterFlow and low-code/no-code</li>
+            <li class="skill-chip">Fast Learning and Adaptation</li>
+          </ul>
         </div>
       </section>
 
@@ -521,7 +553,7 @@
             <div class="contact-links">
               <a href="mailto:nunowired@gmail.com">nunowired@gmail.com</a>
               <a
-                href="https://linkedin.com/in/nunowired"
+                href="https://www.linkedin.com/in/nunowired"
                 target="_blank"
                 rel="noopener noreferrer"
                 >LinkedIn</a
@@ -567,6 +599,7 @@
         </p>
         <div class="footer-links">
           <a href="#inicio">Home</a>
+          <a href="#formacao">Education</a>
           <a href="#experiencia">Experience</a>
           <a href="#contato">Contact</a>
         </div>

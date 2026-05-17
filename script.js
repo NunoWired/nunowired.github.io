@@ -11,13 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const systemPrefersDark = window.matchMedia(
     "(prefers-color-scheme: dark)",
   ).matches;
+  const themeFromRoot = root.getAttribute("data-theme");
 
   let theme =
-    themeFromUrl === "dark" || themeFromUrl === "light"
-      ? themeFromUrl
-      : systemPrefersDark
-        ? "dark"
-        : "light";
+    themeFromRoot === "dark" || themeFromRoot === "light"
+      ? themeFromRoot
+      : themeFromUrl === "dark" || themeFromUrl === "light"
+        ? themeFromUrl
+        : systemPrefersDark
+          ? "dark"
+          : "light";
 
   function getThemeIcon(currentTheme) {
     return currentTheme === "dark"

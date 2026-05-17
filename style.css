@@ -465,6 +465,7 @@ h2 {
   margin-bottom: var(--space-1);
 }
 .skills-grid {
+  list-style: none;
   gap: var(--space-4);
 }
 .skill-chip {
