@@ -9,7 +9,34 @@ const isPt = lang === 'pt-BR';
 
 <footer class="border-t border-slate-200 bg-white py-8 dark:border-slate-800 dark:bg-slate-900">
   <div class="mx-auto flex w-[min(1120px,92%)] flex-wrap items-center justify-between gap-4 text-sm text-slate-600 dark:text-slate-400">
-    <p>{isPt ? 'Antonio Nunes — Código com propósito e muito café.' : 'Antonio Nunes — Code with purpose and plenty of coffee.'}</p>
+    <p>
+      {isPt ? 'Antonio Nunes — Código com ' : 'Antonio Nunes — Code with '}
+      <em class="font-bold text-blue-600 dark:text-blue-400">{isPt ? 'Propósito' : 'Purpose'}</em>
+      {isPt ? ' e muito ' : ' and plenty of '}
+      <img src="/coffee.png" alt={isPt ? 'café' : 'coffee'} width="32" height="32" class="coffee-cup" loading="lazy" />
+    </p>
     <p>© {new Date().getFullYear()} Antonio Nunes</p>
   </div>
 </footer>
+
+<style>
+  .coffee-cup {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    vertical-align: middle;
+    transform-origin: center bottom;
+  }
+  .coffee-cup:hover {
+    animation: coffee-jump 650ms ease-in-out;
+  }
+  @keyframes coffee-jump {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    35% { transform: translateY(-12px) rotate(-8deg); }
+    65% { transform: translateY(-5px) rotate(6deg); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .coffee-cup:hover { animation: none; }
+  }
+</style>
