@@ -10,6 +10,8 @@ interface Props {
 }
 
 const { title, description, lang, canonical, alternate } = Astro.props;
+const shareImage = 'https://avatars.githubusercontent.com/u/44872423?v=4&s=600';
+const imageAlt = lang === 'pt-BR' ? 'Foto de perfil de Antonio Nunes' : 'Profile photo of Antonio Nunes';
 ---
 
 <!doctype html>
@@ -19,6 +21,20 @@ const { title, description, lang, canonical, alternate } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Antonio Nunes" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={lang === 'pt-BR' ? 'pt_BR' : 'en_US'} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:secure_url" content={shareImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={shareImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="pt-BR" href="https://nunowired.github.io/" />
     <link rel="alternate" hreflang="en" href="https://nunowired.github.io/en/" />
