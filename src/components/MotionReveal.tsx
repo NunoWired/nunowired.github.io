@@ -18,6 +18,41 @@ export default function MotionReveal({ children, delay = 0, className }: Props) 
     const element = ref.current;
     if (!element) return;
     const section = element.closest('section');
+
+    if (reduceMotion) {
+      controls.set({ opacity: 1, x: 0, y: 0 });
+      return;
+    }
+
+    if (section?.id === 'formacao' || section?.id === 'education') {
+      const parent = element.parentElement;
+      const index = parent ? Array.from(parent.children).indexOf(element) : 0;
+      const direction = index === 0 ? -1 : 1;
+      const previousOverflow = section.style.overflowX;
+      section.style.overflowX = 'clip';
+      let frame = 0;
+      const update = () => {
+        frame = 0;
+        const height = window.innerHeight;
+        const top = section.getBoundingClientRect().top;
+        const progress = Math.max(0, Math.min(1, (height * 0.95 - top) / (height * 0.5)));
+        const distance = window.innerWidth + element.offsetWidth;
+        controls.set({ opacity: progress, x: direction * distance * (1 - progress), y: 0 });
+      };
+      const schedule = () => {
+        if (!frame) frame = window.requestAnimationFrame(update);
+      };
+      update();
+      window.addEventListener('scroll', schedule, { passive: true });
+      window.addEventListener('resize', schedule);
+      return () => {
+        window.removeEventListener('scroll', schedule);
+        window.removeEventListener('resize', schedule);
+        if (frame) window.cancelAnimationFrame(frame);
+        section.style.overflowX = previousOverflow;
+      };
+    }
+
     const isProjects = section?.id === 'projetos' || section?.id === 'projects';
     const projectLink = isProjects ? element.querySelector<HTMLAnchorElement>('article a[href]') : null;
     const href = projectLink?.getAttribute('href') || '';
@@ -25,11 +60,6 @@ export default function MotionReveal({ children, delay = 0, className }: Props) 
     const distance = window.matchMedia('(max-width: 767px)').matches ? 48 : 140;
 
     if (direction && section) section.style.overflowX = 'clip';
-
-    if (reduceMotion) {
-      controls.set({ opacity: 1, x: 0, y: 0 });
-      return;
-    }
 
     if (!inView) {
       controls.set({ opacity: 0, x: direction * distance, y: direction ? 0 : 32 });
