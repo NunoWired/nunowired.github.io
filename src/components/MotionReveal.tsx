@@ -25,9 +25,9 @@ export default function MotionReveal({ children, delay = 0, className }: Props) 
     }
 
     if (section?.id === 'formacao' || section?.id === 'education') {
-      const parent = element.parentElement;
-      const index = parent ? Array.from(parent.children).indexOf(element) : 0;
-      const direction = index === 0 ? -1 : 1;
+      const heading = element.querySelector('h3')?.textContent?.trim() || '';
+      const isEducation = heading === 'Análise e Desenvolvimento de Sistemas' || heading === 'Systems Analysis and Development';
+      const direction = isEducation ? -1 : 1;
       const previousOverflow = section.style.overflowX;
       section.style.overflowX = 'clip';
       let frame = 0;
