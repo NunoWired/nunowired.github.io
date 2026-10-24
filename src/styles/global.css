@@ -34,6 +34,28 @@ body {
   background-color: color-mix(in srgb, #0f172a 82%, transparent);
 }
 
+@media (max-width: 767px) {
+  #inicio .place-items-center:has(img) {
+    padding-block: 56px;
+  }
+
+  #inicio img + div.absolute {
+    top: 56px;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    transform: translateY(calc(-100% + 12px));
+  }
+
+  #inicio img + div.absolute + div.absolute {
+    top: auto;
+    bottom: 56px;
+    left: auto;
+    right: 0;
+    transform: translateY(calc(100% - 12px));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
