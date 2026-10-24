@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  lang: 'pt-BR' | 'en-US';
+  canonical: string;
+  alternate: string;
+}
+
+const { title, description, lang, canonical, alternate } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="pt-BR" href="https://nunowired.github.io/" />
+    <link rel="alternate" hreflang="en" href="https://nunowired.github.io/en/" />
+    <link rel="icon" href="/n.png" />
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem('portfolio-theme') || 'light';
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      } catch (error) {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900 antialiased transition-colors dark:bg-slate-950 dark:text-slate-100">
+    <slot />
+    <script>
+      const toggle = document.querySelector('[data-theme-toggle]');
+      toggle?.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light');
+      });
+
+      const menuButton = document.querySelector('[data-menu-toggle]');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuButton?.addEventListener('click', () => {
+        const isOpen = mobileMenu?.hasAttribute('hidden');
+        mobileMenu?.toggleAttribute('hidden', !isOpen);
+        menuButton.setAttribute('aria-expanded', String(Boolean(isOpen)));
+      });
+
+      const header = document.getElementById('site-header');
+      const onScroll = () => header?.classList.toggle('glass', window.scrollY > 24);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+    </script>
+  </body>
+</html>

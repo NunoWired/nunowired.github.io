@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import MotionReveal from '../../../components/MotionReveal.tsx';
+
+const screenshots = ['/psicompass01.jpg','/psicompass02.jpg','/psicompass03.jpg','/psicompass04.jpg','/psicompass05.jpg','/psicompass06.jpg','/psicompass07.jpg','/psicompass08.jpg'];
+---
+
+<BaseLayout title="PsiCompass | Antonio Nunes" description="Web system for psychology clinic management, developed by Antonio Nunes." lang="en-US" canonical="https://nunowired.github.io/en/projetos/psicompass" alternate="https://nunowired.github.io/projetos/psicompass">
+  <Header lang="en-US" />
+  <main class="px-4 pb-24 pt-36">
+    <div class="mx-auto w-[min(1120px,100%)]">
+      <MotionReveal client:visible>
+        <a href="/en/#projects" class="font-semibold text-blue-600 dark:text-blue-400">← Back to projects</a>
+        <h1 class="mt-4 text-5xl font-extrabold tracking-tight">PsiCompass</h1>
+        <p class="mt-5 max-w-3xl text-lg text-slate-600 dark:text-slate-300">A web system to support psychology clinic management, including patients, sessions, expenses, registered professionals and access invitations.</p>
+      </MotionReveal>
+      <MotionReveal client:visible delay={0.1} className="mt-10"><img src="/psicompass01.jpg" alt="PsiCompass main screen" class="w-full rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700" loading="lazy" /></MotionReveal>
+      <MotionReveal client:visible className="mt-16"><h2 class="text-3xl font-extrabold">Screenshots</h2><div class="mt-8 grid gap-5 md:grid-cols-2">{screenshots.map((image, index) => <img src={image} alt={`PsiCompass screenshot ${index + 1}`} class="w-full rounded-2xl border border-slate-200 shadow-lg dark:border-slate-700" loading="lazy" />)}</div></MotionReveal>
+      <MotionReveal client:visible className="mt-12"><a href="https://github.com/NunoWired/PsiDesk" target="_blank" rel="noopener" class="rounded-full bg-blue-600 px-6 py-3 font-bold text-white">View GitHub repository</a></MotionReveal>
+    </div>
+  </main>
+  <Footer lang="en-US" />
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+interface Props {
+  lang: 'pt-BR' | 'en-US';
+}
+
+const { lang } = Astro.props;
+const isPt = lang === 'pt-BR';
+---
+
+<footer class="border-t border-slate-200 bg-white py-8 dark:border-slate-800 dark:bg-slate-900">
+  <div class="mx-auto flex w-[min(1120px,92%)] flex-wrap items-center justify-between gap-4 text-sm text-slate-600 dark:text-slate-400">
+    <p>{isPt ? 'Antonio Nunes — Código com propósito e muito café.' : 'Antonio Nunes — Code with purpose and plenty of coffee.'}</p>
+    <p>© {new Date().getFullYear()} Antonio Nunes</p>
+  </div>
+</footer>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import MotionReveal from '../../../components/MotionReveal.tsx';
+
+const screenshots = ['/projetosah01.jpg','/projetosah02.jpg','/projetosah03.jpg','/projetosah04.jpg','/projetosah05.jpg'];
+---
+
+<BaseLayout title="Projeto Sah | Antonio Nunes" description="Responsive landing page for a Catholic music event, developed by Antonio Nunes." lang="en-US" canonical="https://nunowired.github.io/en/projetos/projeto-sah" alternate="https://nunowired.github.io/projetos/projeto-sah">
+  <Header lang="en-US" />
+  <main class="px-4 pb-24 pt-36">
+    <div class="mx-auto w-[min(1120px,100%)]">
+      <MotionReveal client:visible>
+        <a href="/en/#projects" class="font-semibold text-blue-600 dark:text-blue-400">← Back to projects</a>
+        <h1 class="mt-4 text-5xl font-extrabold tracking-tight">Projeto Sah</h1>
+        <p class="mt-5 max-w-3xl text-lg text-slate-600 dark:text-slate-300">A responsive, accessible single-page landing page for a Catholic music event, structured for future Pix ticket sales, Firebase integration and email notifications.</p>
+      </MotionReveal>
+      <MotionReveal client:visible delay={0.1} className="mt-10"><img src="/projetosah01.jpg" alt="Projeto Sah main screen" class="w-full rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700" loading="lazy" /></MotionReveal>
+      <MotionReveal client:visible className="mt-16"><h2 class="text-3xl font-extrabold">Screenshots</h2><div class="mt-8 grid gap-5 md:grid-cols-2">{screenshots.map((image, index) => <img src={image} alt={`Projeto Sah screenshot ${index + 1}`} class="w-full rounded-2xl border border-slate-200 shadow-lg dark:border-slate-700" loading="lazy" />)}</div></MotionReveal>
+      <MotionReveal client:visible className="mt-12 flex flex-wrap gap-3"><a href="https://github.com/NunoWired/projetosah" target="_blank" rel="noopener" class="rounded-full bg-violet-600 px-6 py-3 font-bold text-white">View GitHub repository</a><a href="https://paulinhosanp3d.vercel.app/" target="_blank" rel="noopener" class="rounded-full border border-slate-300 bg-white px-6 py-3 font-bold dark:border-slate-700 dark:bg-slate-900">View live website</a></MotionReveal>
+    </div>
+  </main>
+  <Footer lang="en-US" />
+</BaseLayout>

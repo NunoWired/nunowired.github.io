@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import MotionReveal from '../../components/MotionReveal.tsx';
+
+const screenshots = ['/psicompass01.jpg','/psicompass02.jpg','/psicompass03.jpg','/psicompass04.jpg','/psicompass05.jpg','/psicompass06.jpg','/psicompass07.jpg','/psicompass08.jpg'];
+---
+
+<BaseLayout title="PsiCompass | Antonio Nunes" description="Sistema web para apoio à gestão de consultórios de psicologia, desenvolvido por Antonio Nunes." lang="pt-BR" canonical="https://nunowired.github.io/projetos/psicompass" alternate="https://nunowired.github.io/en/projetos/psicompass">
+  <Header lang="pt-BR" />
+  <main class="px-4 pb-24 pt-36">
+    <div class="mx-auto w-[min(1120px,100%)]">
+      <MotionReveal client:visible>
+        <a href="/#projetos" class="font-semibold text-blue-600 dark:text-blue-400">← Voltar aos projetos</a>
+        <span class="mt-6 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-700 dark:bg-blue-950 dark:text-blue-300">Sistema web · Em evolução</span>
+        <h1 class="mt-4 text-5xl font-extrabold tracking-tight">PsiCompass</h1>
+        <p class="mt-5 max-w-3xl text-lg text-slate-600 dark:text-slate-300">Sistema web para apoio à gestão de consultórios de psicologia. O projeto reúne funcionalidades administrativas e operacionais para profissionais, incluindo gestão de pacientes, sessões, despesas, profissionais cadastrados e convites de acesso.</p>
+      </MotionReveal>
+
+      <MotionReveal client:visible delay={0.1} className="mt-10">
+        <img src="/psicompass01.jpg" alt="Tela principal do PsiCompass" class="w-full rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700" loading="lazy" />
+      </MotionReveal>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-2">
+        <MotionReveal client:visible><div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-700 dark:bg-slate-900"><h2 class="text-2xl font-bold">Tecnologias</h2><ul class="mt-5 grid gap-2 text-slate-600 dark:text-slate-300"><li>• React, TypeScript, Vite e Tailwind CSS</li><li>• API em Python com FastAPI</li><li>• MongoDB</li><li>• Docker Compose e Nginx</li></ul></div></MotionReveal>
+        <MotionReveal client:visible delay={0.12}><div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-700 dark:bg-slate-900"><h2 class="text-2xl font-bold">Funcionalidades</h2><ul class="mt-5 grid gap-2 text-slate-600 dark:text-slate-300"><li>• Gestão de pacientes e sessões</li><li>• Controle de despesas</li><li>• Cadastro de profissionais</li><li>• Convites e controle de acesso</li></ul></div></MotionReveal>
+      </div>
+
+      <MotionReveal client:visible className="mt-16">
+        <h2 class="text-3xl font-extrabold tracking-tight">Telas do sistema</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
+          {screenshots.map((image, index) => <img src={image} alt={`Tela ${index + 1} do PsiCompass`} class="w-full rounded-2xl border border-slate-200 shadow-lg transition hover:-translate-y-1 dark:border-slate-700" loading="lazy" />)}
+        </div>
+      </MotionReveal>
+
+      <MotionReveal client:visible className="mt-12">
+        <a href="https://github.com/NunoWired/PsiDesk" target="_blank" rel="noopener" class="rounded-full bg-blue-600 px-6 py-3 font-bold text-white">Ver repositório no GitHub</a>
+      </MotionReveal>
+    </div>
+  </main>
+  <Footer lang="pt-BR" />
+</BaseLayout>

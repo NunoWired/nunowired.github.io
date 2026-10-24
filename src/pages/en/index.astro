@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import MotionReveal from '../../components/MotionReveal.tsx';
+---
+
+<BaseLayout
+  title="Antonio Nunes | Software & Web Developer"
+  description="Portfolio 2.0.0 of Antonio Nunes, software and web developer. Current projects: PsiCompass and Projeto Sah."
+  lang="en-US"
+  canonical="https://nunowired.github.io/en/"
+  alternate="https://nunowired.github.io/"
+>
+  <Header lang="en-US" />
+
+  <main>
+    <section class="relative overflow-hidden px-4 pb-20 pt-36">
+      <div class="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-blue-500/20 blur-3xl"></div>
+      <div class="relative mx-auto grid w-[min(1120px,100%)] items-center gap-14 lg:grid-cols-[1.1fr_.9fr]">
+        <MotionReveal client:visible>
+          <span class="inline-block rounded-full border border-blue-200 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-600 dark:border-blue-800 dark:bg-slate-900 dark:text-blue-400">Portfolio 2.0.0</span>
+          <h1 class="mt-5 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">Software & <span class="gradient-text">Web Developer</span></h1>
+          <p class="mt-6 max-w-xl text-lg text-slate-600 dark:text-slate-300">I’m Antonio Nunes. My current focus is building web systems, modern interfaces and digital solutions. I combine a degree in Systems Analysis and Development with solid experience in IT, support and infrastructure.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-full bg-blue-600 px-6 py-3 font-bold text-white shadow-lg shadow-blue-600/25 transition hover:-translate-y-0.5">See current projects</a>
+            <a href="https://github.com/NunoWired" target="_blank" rel="noopener" class="rounded-full border border-slate-300 bg-white px-6 py-3 font-bold dark:border-slate-700 dark:bg-slate-900">GitHub</a>
+          </div>
+        </MotionReveal>
+        <MotionReveal client:visible delay={0.12} className="grid place-items-center">
+          <img src="https://avatars.githubusercontent.com/u/44872423?v=4" alt="Profile photo of Antonio Nunes" width="280" height="280" class="h-64 w-64 rounded-[2rem] border-4 border-white object-cover shadow-2xl dark:border-slate-800" />
+        </MotionReveal>
+      </div>
+    </section>
+
+    <section id="projects" class="border-y border-slate-200 bg-white px-4 py-24 dark:border-slate-800 dark:bg-slate-900">
+      <div class="mx-auto w-[min(1120px,100%)]">
+        <MotionReveal client:visible>
+          <h2 class="text-4xl font-extrabold tracking-tight">Projects in development</h2>
+          <p class="mt-4 max-w-2xl text-slate-600 dark:text-slate-300">Recent work in software development and website creation.</p>
+        </MotionReveal>
+        <div class="mt-12 grid gap-6 md:grid-cols-2">
+          <MotionReveal client:visible><article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-xl dark:border-slate-700 dark:bg-slate-950"><img src="/psicompass01.jpg" alt="PsiCompass screenshot" class="h-56 w-full object-cover object-top" loading="lazy" /><div class="p-7"><h3 class="text-2xl font-bold">PsiCompass</h3><p class="mt-3 text-slate-600 dark:text-slate-300">A web system for psychology clinic management, including patients, sessions, expenses, professionals and access invitations.</p><a href="/en/projetos/psicompass" class="mt-5 inline-block font-bold text-blue-600 dark:text-blue-400">View project and screenshots →</a></div></article></MotionReveal>
+          <MotionReveal client:visible delay={0.12}><article class="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-xl dark:border-slate-700 dark:bg-slate-950"><img src="/projetosah01.jpg" alt="Projeto Sah screenshot" class="h-56 w-full object-cover object-top" loading="lazy" /><div class="p-7"><h3 class="text-2xl font-bold">Projeto Sah</h3><p class="mt-3 text-slate-600 dark:text-slate-300">A responsive, accessible landing page for a Catholic music event, structured for future Pix ticket sales.</p><a href="/en/projetos/projeto-sah" class="mt-5 inline-block font-bold text-violet-600 dark:text-violet-400">View project and screenshots →</a></div></article></MotionReveal>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="px-4 py-24">
+      <div class="mx-auto grid w-[min(1120px,100%)] gap-8 lg:grid-cols-2">
+        <MotionReveal client:visible><h2 class="text-4xl font-extrabold tracking-tight">IT experience, new chapter in development.</h2><p class="mt-5 text-slate-600 dark:text-slate-300">I have a solid background in technology, working with technical support, system deployment, networks, servers, databases and user support. I am now focusing my career on software development and the creation of websites and web systems.</p></MotionReveal>
+        <MotionReveal client:visible delay={0.12}><div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-700 dark:bg-slate-900"><h3 class="text-2xl font-bold">Portfolio 2.0.0</h3><p class="mt-4 text-slate-600 dark:text-slate-300">This version evolved from an initial HTML, CSS and JavaScript structure. It was enhanced with Astro, React, TypeScript, Tailwind CSS and Framer Motion to deliver a more modern, fast, organized and accessible experience.</p></div></MotionReveal>
+      </div>
+    </section>
+
+    <section id="skills" class="border-y border-slate-200 bg-white px-4 py-24 dark:border-slate-800 dark:bg-slate-900">
+      <div class="mx-auto w-[min(1120px,100%)]">
+        <MotionReveal client:visible><h2 class="text-4xl font-extrabold tracking-tight">Technologies and abilities</h2></MotionReveal>
+        <MotionReveal client:visible delay={0.1}><ul class="mt-10 flex flex-wrap gap-3">{['HTML','CSS','JavaScript','Astro','React','TypeScript','Tailwind CSS','Framer Motion','Python','FastAPI','MongoDB','MySQL','PostgreSQL','Docker','Git & GitHub','GNU/Linux','Windows Server','Networks, VPN & firewall','Technical support','FlutterFlow'].map((skill) => <li class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold dark:border-slate-700 dark:bg-slate-950">{skill}</li>)}</ul></MotionReveal>
+      </div>
+    </section>
+
+    <section id="experience" class="px-4 py-24">
+      <div class="mx-auto w-[min(1120px,100%)]">
+        <MotionReveal client:visible><h2 class="text-4xl font-extrabold tracking-tight">Professional background</h2></MotionReveal>
+        <div class="mt-10 grid gap-5">
+          <MotionReveal client:visible><article class="rounded-2xl border border-slate-200 border-l-4 border-l-blue-600 bg-white p-7 shadow-lg dark:border-slate-700 dark:bg-slate-900"><strong>Canal Técnico Consultoria e Tecnologia Ltda</strong><p class="text-sm text-slate-500">Support Technician, Support Manager and Agency Management · Jul 2010 – Apr 2023</p><p class="mt-3 text-slate-600 dark:text-slate-300">Commercial automation deployment, corporate support, GNU/Linux and Windows Server, MySQL and PostgreSQL, VPNs, firewalls, monitoring, TEF and team leadership.</p></article></MotionReveal>
+          <MotionReveal client:visible delay={0.08}><article class="rounded-2xl border border-slate-200 border-l-4 border-l-blue-600 bg-white p-7 shadow-lg dark:border-slate-700 dark:bg-slate-900"><strong>Soledade Comercial de Alimentos Ltda</strong><p class="text-sm text-slate-500">IT Supervisor · Jun 2009 – Dec 2009</p><p class="mt-3 text-slate-600 dark:text-slate-300">IT team and user support, focused on operational stability, communication between stores and software performance.</p></article></MotionReveal>
+          <MotionReveal client:visible delay={0.16}><article class="rounded-2xl border border-slate-200 border-l-4 border-l-blue-600 bg-white p-7 shadow-lg dark:border-slate-700 dark:bg-slate-900"><strong>Serviços Brisa Brasil Ltda</strong><p class="text-sm text-slate-500">Monitoring Operator · Dec 2005 – Nov 2006</p><p class="mt-3 text-slate-600 dark:text-slate-300">Monitoring communication between Banco do Brasil branches, network support and Cisco environments.</p></article></MotionReveal>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t border-slate-200 bg-white px-4 py-24 dark:border-slate-800 dark:bg-slate-900">
+      <MotionReveal client:visible className="mx-auto max-w-3xl text-center">
+        <h2 class="text-4xl font-extrabold tracking-tight">Let’s talk</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">I am open to opportunities in web development, software development and digital projects.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="mailto:nunowired@gmail.com" class="rounded-full border border-slate-300 bg-slate-50 px-5 py-3 font-semibold dark:border-slate-700 dark:bg-slate-950">nunowired@gmail.com</a>
+          <a href="https://www.linkedin.com/in/nunowired" target="_blank" rel="noopener" class="rounded-full border border-slate-300 bg-slate-50 px-5 py-3 font-semibold dark:border-slate-700 dark:bg-slate-950">LinkedIn</a>
+          <a href="https://github.com/NunoWired" target="_blank" rel="noopener" class="rounded-full border border-slate-300 bg-slate-50 px-5 py-3 font-semibold dark:border-slate-700 dark:bg-slate-950">GitHub</a>
+        </div>
+      </MotionReveal>
+    </section>
+  </main>
+
+  <Footer lang="en-US" />
+</BaseLayout>

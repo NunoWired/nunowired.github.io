@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import MotionReveal from '../../components/MotionReveal.tsx';
+
+const screenshots = ['/projetosah01.jpg','/projetosah02.jpg','/projetosah03.jpg','/projetosah04.jpg','/projetosah05.jpg'];
+---
+
+<BaseLayout title="Projeto Sah | Antonio Nunes" description="Landing page responsiva para evento de canto católico, desenvolvida por Antonio Nunes." lang="pt-BR" canonical="https://nunowired.github.io/projetos/projeto-sah" alternate="https://nunowired.github.io/en/projetos/projeto-sah">
+  <Header lang="pt-BR" />
+  <main class="px-4 pb-24 pt-36">
+    <div class="mx-auto w-[min(1120px,100%)]">
+      <MotionReveal client:visible>
+        <a href="/#projetos" class="font-semibold text-blue-600 dark:text-blue-400">← Voltar aos projetos</a>
+        <span class="mt-6 inline-block rounded-full bg-violet-100 px-3 py-1 text-xs font-bold text-violet-700 dark:bg-violet-950 dark:text-violet-300">Desenvolvimento web · Em andamento</span>
+        <h1 class="mt-4 text-5xl font-extrabold tracking-tight">Projeto Sah</h1>
+        <p class="mt-5 max-w-3xl text-lg text-slate-600 dark:text-slate-300">Landing page responsiva, acessível e de página única para divulgação de um evento musical católico. A estrutura foi planejada para futura venda de ingressos via Pix, integração com Firebase, envio de e-mails e área administrativa.</p>
+      </MotionReveal>
+
+      <MotionReveal client:visible delay={0.1} className="mt-10">
+        <img src="/projetosah01.jpg" alt="Tela principal do Projeto Sah" class="w-full rounded-3xl border border-slate-200 shadow-2xl dark:border-slate-700" loading="lazy" />
+      </MotionReveal>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-2">
+        <MotionReveal client:visible><div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-700 dark:bg-slate-900"><h2 class="text-2xl font-bold">Tecnologias</h2><ul class="mt-5 grid gap-2 text-slate-600 dark:text-slate-300"><li>• HTML, CSS e JavaScript</li><li>• Layout responsivo e acessível</li><li>• Tema claro e escuro</li><li>• Estrutura para Firebase e Pix</li></ul></div></MotionReveal>
+        <MotionReveal client:visible delay={0.12}><div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl dark:border-slate-700 dark:bg-slate-900"><h2 class="text-2xl font-bold">Objetivos</h2><ul class="mt-5 grid gap-2 text-slate-600 dark:text-slate-300"><li>• Divulgar o evento musical</li><li>• Apresentar artista e programação</li><li>• Preparar venda de ingressos via Pix</li><li>• Oferecer navegação simples em qualquer dispositivo</li></ul></div></MotionReveal>
+      </div>
+
+      <MotionReveal client:visible className="mt-16">
+        <h2 class="text-3xl font-extrabold tracking-tight">Telas do projeto</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
+          {screenshots.map((image, index) => <img src={image} alt={`Tela ${index + 1} do Projeto Sah`} class="w-full rounded-2xl border border-slate-200 shadow-lg transition hover:-translate-y-1 dark:border-slate-700" loading="lazy" />)}
+        </div>
+      </MotionReveal>
+
+      <MotionReveal client:visible className="mt-12 flex flex-wrap gap-3">
+        <a href="https://github.com/NunoWired/projetosah" target="_blank" rel="noopener" class="rounded-full bg-violet-600 px-6 py-3 font-bold text-white">Ver repositório no GitHub</a>
+        <a href="https://paulinhosanp3d.vercel.app/" target="_blank" rel="noopener" class="rounded-full border border-slate-300 bg-white px-6 py-3 font-bold dark:border-slate-700 dark:bg-slate-900">Ver site online</a>
+      </MotionReveal>
+    </div>
+  </main>
+  <Footer lang="pt-BR" />
+</BaseLayout>
